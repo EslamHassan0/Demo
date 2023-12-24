@@ -1,0 +1,23 @@
+﻿@model Demo.Models.Product
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container p-3 my-3 border">
+    <h1>Product Details</h1>
+    <hr />
+    <dl class="row">
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+    </dl>
+    <hr />
+    <div>
+        <a class="btn btn-primary" asp-action="AddOrEdit" asp-route-id="@Model.Id">Edit</a>
+        <a class="btn btn-danger" asp-action="Index">Back</a>
+    </div>
+</div>
